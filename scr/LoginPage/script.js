@@ -23,7 +23,7 @@ document.getElementById("LoginForm").addEventListener("submit", function(event) 
     .then(data => {
         if (data.success) {
             alert("Login successful!");
-            window.location.href = "dashboard.html"; // Redirect on success
+            window.location.href = "../index.html"; // Redirect on success
         } else {
             alert("Invalid email or password.");
         }
