@@ -1,0 +1,115 @@
+body{
+    background-color: rgba(255, 255, 255, 0.945);
+    width: 100%;
+    margin: 0;
+}
+
+header{
+    padding-top: 10px;
+    display: flex;
+    height: 3vh;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: -5px;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: center;
+    margin-right:10px;
+}
+header img{
+    height: 35px;
+}
+header nav a{
+    font-family:'Fredoka' ;
+    font-weight: 400;
+    text-decoration: none;
+    font-size: 20px;
+}
+header nav a:hover{
+    color: #FB950B;
+}
+header nav button{
+    border:none;
+    background-color:#8E1CAB;
+    border-radius:20px;   
+    width: 80px;
+    padding-bottom: 5px;
+    margin-top: 7px;
+    
+    height:100%;
+}
+header nav button a{
+    color: white;
+    text-align: center;
+    font-size: 15px;
+}
+
+header nav button:hover{
+    background-color: #FB950B;
+}
+header nav button a:hover{
+    color: #ffffff;
+}
+
+/*container-home*/
+
+.container-home{
+    background-image: url(img/Component\ 1\ \(1\).png);
+    background-size: cover;
+    height: 80vh;
+    width: 100%;
+    margin-top: 15px;
+    position: relative;
+}
+.container-home .texto {
+    padding-left: 5vw; /* Ajuste o padding para o texto não ficar muito longe */
+    padding-top: 10vh;
+    position: absolute;
+    z-index: 1; /* Garante que o texto fique acima do carrossel */
+    color: white; /* Para garantir que o texto seja visível */
+}
+
+.container-home .carrossel {
+    right: 0;
+    position: absolute;
+    top: 0;
+    margin-top: 52px;
+    width: 70%; /* Carrossel ocupa 70% da largura */
+    height:100%; /* A altura do carrossel será igual à altura do contêiner */
+    z-index: -1;
+    overflow: hidden; /* Esconde as imagens fora da área do carrossel */
+}
+
+.carrossel-imagens {
+    display: flex;
+    animation: slide 8s infinite; /* Controla a animação */
+}
+
+.carrossel-imagens img {
+    width: 100%; /* Imagens ocupam toda a largura do carrossel */
+    height: 100%; /* Imagens terão a mesma altura que o contêiner */
+    object-fit: cover; /* Faz as imagens se ajustarem proporcionalmente ao tamanho do carrossel */
+}
+
+/* Animação de transição entre as imagens */
+@keyframes slide {
+    0% {
+        transform: translateX(0); /* A primeira imagem começa visível */
+    }
+    25% {
+        transform: translateX(-100%); /* A primeira imagem sai da tela pela esquerda */
+    }
+    50% {
+        transform: translateX(-100%); /* A segunda imagem entra pela direita */
+    }
+    75% {
+        transform: translateX(-200%); /* A segunda imagem sai pela esquerda */
+    }
+    100% {
+        transform: translateX(0); /* A terceira imagem volta à posição inicial */
+    }
+}
