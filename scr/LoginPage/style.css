@@ -17,6 +17,7 @@ body{
     margin-top: 23.4vh;
     margin-left: -18px;
     border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); 
 }
 .login-container{
     display: flex;
@@ -28,9 +29,11 @@ body{
     padding-bottom: 50px;
     padding-top: 40px;
     margin-top: 30%;
+    border: none;
     justify-content: center;
     align-items: center;
-
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3); 
+    
 }
 
 .login-container h2{
@@ -44,23 +47,25 @@ body{
     display: flex;
     border: none;
     border-radius: 15px;
-    background-color: rgba(27, 9, 29, 0.801);
+    background-color: rgba(45, 2, 95, 0.801);
     height: 30px;
     width: 90%;
     margin-top: 10px;
     margin-bottom: 10px;
     padding-left: 10px;
-
+    color: white;
+    outline: none;
 }
 .login-container ::placeholder{
-    color: rgba(255, 106, 20, 0.815); 
+    color: rgba(135, 33, 175, 0.993);  
     font-family: 'Fredoka';
     font-size: 15px;
+   
 }
 
 .login-container a{
     display: flex;
-    color: rgb(32, 0, 150);
+    color: rgb(0, 0, 0);
     font-size: 15px;
     text-decoration: none;
     font-family: 'Fredoka';
@@ -68,12 +73,13 @@ body{
     margin-bottom: 5px;
 }
 button{
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3); 
     margin-top: 5px;
     font-family: 'Fredoka';
     border: none;
     border-radius: 10px;
-    color: white;
-    background-color: #6f03d4;
+    color: rgb(219, 169, 252);
+    background-color: #7f04af;
     text-align: center;
     width: 80%;
     margin-left: 10%;

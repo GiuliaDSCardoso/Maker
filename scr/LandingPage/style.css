@@ -5,12 +5,14 @@ body{
 }
 
 header{
-    padding-top: 10px;
     display: flex;
-    height: 3vh;
+    height: 6vh;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: -5px;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+
 }
 
 header nav{
@@ -19,6 +21,7 @@ header nav{
     gap: 15px;
     align-items: center;
     margin-right:10px;
+    
 }
 header img{
     height: 35px;
@@ -27,10 +30,11 @@ header nav a{
     font-family:'Fredoka' ;
     font-weight: 400;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 15px;
+    color: #f7b764;
 }
 header nav a:hover{
-    color: #FB950B;
+    color: #fffefc;
 }
 header nav button{
     border:none;
@@ -57,45 +61,48 @@ header nav button a:hover{
 
 /*container-home*/
 
-.container-home{
-    background-image: url(img/Component\ 1\ \(1\).png);
+.container-home {
+    display: flex;
     background-size: cover;
-    height: 80vh;
+    height: 100vh;
     width: 100%;
-    margin-top: 15px;
-    position: relative;
+    justify-content: space-between;
+
+    position: relative; /* Para permitir que o carrossel se posicione sobre o fundo */
+    overflow: hidden; /* Garante que nada saia da área visível */
 }
+
 .container-home .texto {
-    padding-left: 5vw; /* Ajuste o padding para o texto não ficar muito longe */
+    padding-left: 20vh; /* Ajuste o padding para o texto não ficar muito longe */
     padding-top: 10vh;
-    position: absolute;
-    z-index: 1; /* Garante que o texto fique acima do carrossel */
     color: white; /* Para garantir que o texto seja visível */
+    z-index: 2; /* Coloca o texto acima da imagem */
 }
 
 .container-home .carrossel {
+    position: absolute; /* Posiciona o carrossel em relação ao contêiner */
+    bottom: 0; /* Faz a imagem começar da parte inferior */
     right: 0;
-    position: absolute;
-    top: 0;
-    margin-top: 52px;
-    width: 70%; /* Carrossel ocupa 70% da largura */
-    height:100%; /* A altura do carrossel será igual à altura do contêiner */
-    z-index: -1;
+    width: 100%; /* O carrossel ocupa 50% da largura do contêiner */
+    height: 100%; /* A altura do carrossel será igual à altura do contêiner */
     overflow: hidden; /* Esconde as imagens fora da área do carrossel */
+    z-index: 1; /* Garante que o carrossel fique abaixo do texto */
 }
 
 .carrossel-imagens {
     display: flex;
-    animation: slide 8s infinite; /* Controla a animação */
+    animation: slide 17s infinite; /* Controla a animação */
+    background-size: cover;
 }
 
 .carrossel-imagens img {
     width: 100%; /* Imagens ocupam toda a largura do carrossel */
-    height: 100%; /* Imagens terão a mesma altura que o contêiner */
+    height: 100vh; /* Imagens terão a mesma altura que o contêiner */
     object-fit: cover; /* Faz as imagens se ajustarem proporcionalmente ao tamanho do carrossel */
 }
 
 /* Animação de transição entre as imagens */
+
 @keyframes slide {
     0% {
         transform: translateX(0); /* A primeira imagem começa visível */
@@ -112,4 +119,108 @@ header nav button a:hover{
     100% {
         transform: translateX(0); /* A terceira imagem volta à posição inicial */
     }
+}
+
+/*buttons*/
+.buttons {
+    position: absolute; /* Coloca os botões sobre o carrossel */
+    bottom: 10%; /* Ajuste para posicionamento */
+    left: 50%;
+    transform: translateX(-50%); /* Centraliza os botões */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    z-index: 3; 
+
+}
+
+.buttons button {
+    background-color: #8E1CAB;
+    border-radius: 20px;
+    border: none;
+    width: 35vh;
+    height: 5vh;
+    opacity: 0.9; /* Deixa um pouco transparente para parecer integrado */
+}
+
+.buttons button:hover {
+    background-color: #000000c2;
+}
+
+.buttons button a {
+    text-decoration: none;
+    font-family: 'Fredoka';
+    color: white;
+    font-size: 25px;
+}
+
+
+/*sobre*/
+
+.About{
+    display: flex;
+    padding: 20vh 20vh;
+    background-color: #FB950B;
+    justify-content: space-around;
+}
+.About .texto{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.About h1{
+    font-family: 'Fredoka';
+    font-weight: 300;
+    font-size: 20px;
+    color: white;
+    margin-top: 25px;
+    letter-spacing: 5px;
+}
+
+.About h2{
+    font-family: 'Fredoka';
+    font-weight: 600;
+    text-align: justify;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    font-size: 40px;
+    color: white;
+    margin-top: -20px;
+    letter-spacing: -1px;
+}
+.About h3{
+    font-family: "Fredoka";
+    color: white;
+    text-align: justify;
+    width: 70%;
+    margin-top: -20px;
+    font-weight: 200;
+}
+.About button{
+    border: none;
+    border-radius: 15px;
+    background-color: #8E1CAB;
+    width: 30vh;
+    margin-top: 10px;
+    height: 5vh;
+}
+.About button a{
+    color: white;
+
+    font-family: 'Fredoka';
+    text-decoration: none;
+}
+.About .imagem{
+    display: flex;
+    justify-content: center;
+    
+}
+.About img{
+    height: 60vh;
+    width: 80vh;
+    justify-content: center;
+    border-radius: 20px;
 }
