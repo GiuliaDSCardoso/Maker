@@ -10,9 +10,6 @@ $conn = new mysqli($host, $user, $pass, $dbname);
 // Verificar a conexão
 if ($conn->connect_error) {
     die("Falha na conexão: " . $conn->connect_error);
-} else {
-    // Conexão bem-sucedida
-    // echo "Conexão bem-sucedida"; // Comentado para não mostrar na produção
 }
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -37,9 +34,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
         // Verificar a senha fornecida com a senha hasheada no banco
         if (password_verify($senha, $senhaHash)) {
-            echo json_encode(["success" => true, "message" => "Login bem-sucedido"]);
-            // Aqui você pode iniciar uma sessão ou redirecionar para outra página
-            // Exemplo: session_start(); $_SESSION['user_id'] = $id;
+            // Login bem-sucedido, redirecionar para a página "Maker/index.html"
+            header("Location:../index.html");
+            exit; // Certifique-se de chamar exit após o redirecionamento
         } else {
             echo json_encode(["error" => "Senha incorreta"]);
         }
