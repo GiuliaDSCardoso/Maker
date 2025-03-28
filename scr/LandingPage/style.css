@@ -160,7 +160,7 @@ header nav button a:hover{
 
 .About{
     display: flex;
-    padding: 20vh 20vh;
+    padding: 25vh 20vh;
     background-color: #FB950B;
     justify-content: space-around;
 }
@@ -206,6 +206,10 @@ header nav button a:hover{
     width: 30vh;
     margin-top: 10px;
     height: 5vh;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.219); 
+}
+.About button:hover{
+    background-color: rgba(0, 0, 0, 0.671);
 }
 .About button a{
     color: white;
@@ -223,4 +227,181 @@ header nav button a:hover{
     width: 80vh;
     justify-content: center;
     border-radius: 20px;
+}
+/*sugestões*/
+
+.Sugestoes {
+    width: 50%;
+    margin: auto;
+    height: 100vh;
+    padding-top: 1                  0vh;
+}
+.Sugestoes h2{
+    font-family: 'Fredoka';
+    font-weight: 500;
+    text-align: center;
+    margin-top: 10vh;
+    margin-left: -5.5vh;
+    margin-bottom: -25vh;
+}
+.fila1 {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    margin-top: 30%;
+}
+.fila1 .teste1, .teste2, .teste3, .teste4{
+    background-color: #eeeded3b;
+    width: 30vh;
+    height: 25vh;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.219); 
+    
+}
+.fila1 h1{
+    font-family: 'Fredoka';
+    font-weight: 400;
+    font-size: 17px;
+    padding-top: 7vh;
+    color: rgba(0, 0, 0, 0.575);
+}
+
+.fila1 h3{
+    font-family: 'Fredoka';
+    font-weight: 200;
+    font-size: 12px;
+    color: grey;
+}
+.input-container {
+    display: flex;
+    align-items: end;
+    width: 95%;
+    
+}
+input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(250, 250, 250);
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.219); 
+}
+.enviar {
+    cursor: pointer;
+    margin-left: 5px;
+    padding-right: 5px;
+    height: 35px;
+    border: none;
+    border-radius: 20px;
+    background-color:#FB950B;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.219); 
+}
+
+.enviar img{
+    width: 25px;
+    height: 25px;
+    margin-bottom: -5px;
+    
+}
+
+/*contato*/
+.contato{
+    display: flex;
+    height: 80vh;
+    justify-content: space-around;
+    padding-top: 30vh;
+    background-color: #FB950B;
+    
+}
+.texto{
+    margin-right: -90vh;
+}
+.texto .email{
+    margin-bottom: 10px;
+    
+}
+.texto .assunto{
+    margin-bottom: 10px;
+}
+.texto .email input, .assunto input{
+    width: 40vh;
+}
+.texto .mensagem input {
+    height: 10vh;
+    width: 40vh;
+}
+.contato h2{
+    font-family: 'Fredoka';
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    
+}
+.contato img{
+    height: 40vh;
+    width: 40vh;
+}
+.contato .mensagem{
+    height: 2vh;
+}
+
+footer{
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-right: 10vh;
+    padding-left: 10vh;
+    
+}
+footer .image{
+    display: flex;
+    gap: 100px;
+}
+footer .image img{
+    width: 90px;
+    height: 80px;
+    margin-right: -50px;
+}
+footer .image h2{
+    font-family: 'Fredoka';
+    font-weight: 300;
+    font-size: 15px;
+    width: 30%;
+    text-align: justify;
+}
+footer .redes{
+   
+    margin-top: -20px;
+}
+footer .redes h1{
+    font-family: 'Fredoka';
+    font-weight: 300;
+    font-size: 15px;
+    margin-left: 7px;
+}
+footer .redes button{
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+footer .redes img{
+    width: 30px;
+}
+
+
+.rodape{
+    width: 100%;
+    height: 20px;
+    background-color: #8E1CAB;
+}
+
+.rodape h1{
+    font-family: 'Fredoka';
+    font-weight: 200;
+    font-size: 15px;
+    text-align: center;
+    color: white;
 }
